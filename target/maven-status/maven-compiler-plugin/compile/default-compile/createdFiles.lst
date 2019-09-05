@@ -1,0 +1,6 @@
+com\dutchjelly\files\FileManager.class
+com\dutchjelly\util\InventoryUtil.class
+com\dutchjelly\events\DeathEvent.class
+com\dutchjelly\commands\ir.class
+com\dutchjelly\InventoryRevive.class
+com\dutchjelly\gui\ReviveGUI.class
