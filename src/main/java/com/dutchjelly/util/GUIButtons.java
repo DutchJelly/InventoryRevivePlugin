@@ -12,24 +12,18 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class GUIButtons {
-	
-	public static ItemStack save;
-	public static ItemStack reset;
+
 	public static ItemStack back;
 	public static ItemStack filling;
 	public static ItemStack next;
 	public static ItemStack previous;
-	public static ItemStack delete;
 	
 	public static void init(){
 		//TODO make this configurable
-		save = makeItem("&6Save changes", Material.EMERALD_ORE);
-		reset = makeItem("&7Reset recipe", Material.REDSTONE);
 		back = makeItem("&7Back to previous page", Material.GLOWSTONE_DUST);
 		filling = makeItem("", Adapter.GetStainedGlassPane(AColor.GRAY));
 		next = makeItem("&2Next", Adapter.GetStainedGlassPane(AColor.LIGHT_BLUE));
 		previous = makeItem("&2Previous", Adapter.GetStainedGlassPane(AColor.LIGHT_BLUE));
-		delete = makeItem("&4&lDELETE", Material.REDSTONE_BLOCK);
 	}
 	
 	private static ItemMeta setBasicMeta(ItemMeta meta){

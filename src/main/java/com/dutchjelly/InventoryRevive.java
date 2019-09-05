@@ -1,21 +1,27 @@
 package com.dutchjelly;
 
 import com.dutchjelly.events.DeathEvent;
+import com.dutchjelly.events.InventoryEvents;
 import com.dutchjelly.files.FileManager;
+import com.dutchjelly.gui.GUIManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.dutchjelly.commands.ir;
 
 
 public class InventoryRevive extends JavaPlugin {
-
-    //Keep track of objects that always have one instance
     private static InventoryRevive self;
-    private static FileManager fm;
     public static InventoryRevive self(){
         return self;
     }
-    public static FileManager fm(){
+
+    private FileManager fm;
+    public FileManager fm(){
         return fm;
+    }
+
+    private GUIManager guiManager;
+    public GUIManager getGuiManager() {
+        return guiManager;
     }
 
     @Override
@@ -26,6 +32,7 @@ public class InventoryRevive extends JavaPlugin {
 
        this.getCommand("ir").setExecutor(new ir());
        this.getServer().getPluginManager().registerEvents(new DeathEvent(), this);
+       this.getServer().getPluginManager().registerEvents(new InventoryEvents(), this);
     }
 
     @Override

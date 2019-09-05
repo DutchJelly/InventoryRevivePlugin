@@ -1,6 +1,14 @@
 com\dutchjelly\files\FileManager.class
-com\dutchjelly\util\InventoryUtil.class
-com\dutchjelly\events\DeathEvent.class
+com\dutchjelly\util\GUIUtil.class
+com\dutchjelly\gui\GUIManager.class
 com\dutchjelly\commands\ir.class
 com\dutchjelly\InventoryRevive.class
+com\dutchjelly\events\InventoryEvents.class
+com\dutchjelly\compatibility\Adapter.class
+com\dutchjelly\compatibility\Adapter$1.class
 com\dutchjelly\gui\ReviveGUI.class
+com\dutchjelly\gui\ScrollingGUI.class
+com\dutchjelly\util\InventoryUtil.class
+com\dutchjelly\events\DeathEvent.class
+com\dutchjelly\util\GUIButtons.class
+com\dutchjelly\compatibility\AColor.class

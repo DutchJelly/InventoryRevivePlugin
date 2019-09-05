@@ -2,6 +2,7 @@ author: dutchjelly
 name: InventoryRevive
 main: com.dutchjelly.InventoryRevive
 version: 0.0.1
+api-version: 1.13
 commands:
   ir:
     description: Opens the gui to revive players' inventories.

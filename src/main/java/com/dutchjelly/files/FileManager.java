@@ -7,7 +7,9 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class FileManager {
@@ -42,6 +44,10 @@ public class FileManager {
     public void remove(String file, String key){
         files.get(file).getKey().set(key, null);
         saveConfig(file);
+    }
+
+    public List<String> listKeys(String file){
+        return new ArrayList<String>(files.get(file).getKey().getKeys(false));
     }
 
     public Object get(String file, String key){
