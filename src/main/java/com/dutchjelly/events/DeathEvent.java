@@ -7,6 +7,8 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.inventory.Inventory;
 
+import java.util.Arrays;
+
 public class DeathEvent implements Listener {
 
     @EventHandler
@@ -17,7 +19,7 @@ public class DeathEvent implements Listener {
         //DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HH:mm:ss");
         InventoryRevive.self().fm().save("data.yml",
                 e.getEntity().getUniqueId().toString(),
-                e.getEntity().getInventory()
+                Arrays.asList(e.getEntity().getInventory().getContents())
         );
     }
 

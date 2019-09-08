@@ -1,6 +1,8 @@
 package com.dutchjelly.files;
 
 import javafx.util.Pair;
+import org.bukkit.Bukkit;
+import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -11,6 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
 
 public class FileManager {
 
@@ -36,7 +39,6 @@ public class FileManager {
     }
 
     public void save(String file, String key, Object content){
-
         files.get(file).getKey().set(key, content);
         saveConfig(file);
     }
@@ -59,6 +61,7 @@ public class FileManager {
         try {
             filePair.getKey().save(filePair.getValue());
         } catch (IOException e) {
+            Bukkit.getLogger().log(Level.WARNING, "Error saving a file config!");
         }
     }
 

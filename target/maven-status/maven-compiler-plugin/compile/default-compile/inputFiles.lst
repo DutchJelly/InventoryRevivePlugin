@@ -1,6 +1,14 @@
 C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\commands\ir.java
+C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\events\InventoryEvents.java
+C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\files\FileManager.java
+C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\gui\ScrollingGUI.java
+C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\util\GUIUtil.java
+C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\compatibility\Adapter.java
+C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\gui\GUIManager.java
+C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\compatibility\AColor.java
 C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\InventoryRevive.java
 C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\gui\ReviveGUI.java
-C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\files\FileManager.java
+C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\util\GUIButtons.java
 C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\events\DeathEvent.java
 C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\util\InventoryUtil.java
+C:\Users\Jelle PC (JPC)\Desktop\Git\InventoryRevivePlugin\src\main\java\com\dutchjelly\model\CustomPlayerInventory.java

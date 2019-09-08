@@ -1,7 +1,9 @@
 package com.dutchjelly.gui;
 
+import com.dutchjelly.InventoryRevive;
 import com.dutchjelly.util.GUIButtons;
 import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.event.inventory.InventoryEvent;
 import org.bukkit.inventory.Inventory;
@@ -16,7 +18,7 @@ public class ScrollingGUI {
     private List<Inventory> pages = new ArrayList<Inventory>();
     private List<ItemStack> contents = new ArrayList<ItemStack>();
 
-    private String name;
+    String name = "scrolling gui";
 
     private int currentPage = 0;
 
@@ -35,8 +37,8 @@ public class ScrollingGUI {
         int itemIndex = 0;
         for(int i = 0; i < pageAmount; i++){
             Inventory page = create();
-            while(page.firstEmpty() != -1 && itemIndex < contents.size())
-                page.addItem(contents.get(itemIndex));
+            while(page.firstEmpty() != -1 && itemIndex++ < contents.size())
+                page.addItem(contents.get(itemIndex-1));
             pages.add(page);
         }
     }
@@ -62,9 +64,15 @@ public class ScrollingGUI {
         return pages.contains(inv);
     }
 
-    //This needs to be overwritten by a child class.
+    //This needs to be overwritten by a child class, but should be called.
     public void handleEvent(InventoryClickEvent e){
-
+        //Stuff that requires inventory to be reopened.
+        if(e.getCurrentItem() == null) return;
+        if(e.getCurrentItem().equals(GUIButtons.next))
+            scroll(1);
+        if(e.getCurrentItem().equals(GUIButtons.previous))
+            scroll(-1);
+        InventoryRevive.self().getGuiManager().open(this, (Player)e.getWhoClicked());
     }
 
     public void scroll(int scrollAmount){

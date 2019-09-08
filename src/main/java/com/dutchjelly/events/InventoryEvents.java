@@ -11,6 +11,8 @@ public class InventoryEvents implements Listener {
 
     @EventHandler
     public void onClick(InventoryClickEvent e){
+        System.out.println("EVENT FIRED");
+        System.out.println(InventoryRevive.self().getGuiManager().isGUI(e.getView().getTopInventory()));
         InventoryRevive.self().getGuiManager().tryAssignHandler(e);
     }
 

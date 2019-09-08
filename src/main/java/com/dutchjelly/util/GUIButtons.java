@@ -20,28 +20,30 @@ public class GUIButtons {
 	
 	public static void init(){
 		//TODO make this configurable
-		back = makeItem("&7Back to previous page", Material.GLOWSTONE_DUST);
-		filling = makeItem("", Adapter.GetStainedGlassPane(AColor.GRAY));
-		next = makeItem("&2Next", Adapter.GetStainedGlassPane(AColor.LIGHT_BLUE));
-		previous = makeItem("&2Previous", Adapter.GetStainedGlassPane(AColor.LIGHT_BLUE));
+		back = makeItem("&7Back to previous page", Material.GLOWSTONE_DUST, true);
+		filling = makeItem("", Adapter.GetStainedGlassPane(AColor.GRAY), false);
+		next = makeItem("&2Next", Adapter.GetStainedGlassPane(AColor.LIGHT_BLUE), true);
+		previous = makeItem("&2Previous", Adapter.GetStainedGlassPane(AColor.LIGHT_BLUE), true);
 	}
 	
-	private static ItemMeta setBasicMeta(ItemMeta meta){
-		meta.addEnchant(Enchantment.ARROW_DAMAGE, 1, true);
-		meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+	private static ItemMeta setBasicMeta(ItemMeta meta, boolean enchant){
+		if(enchant){
+			meta.addEnchant(Enchantment.ARROW_DAMAGE, 1, true);
+			meta.addItemFlags(ItemFlag.HIDE_ENCHANTS);
+		}
 		meta.addItemFlags(ItemFlag.HIDE_ATTRIBUTES);
 		return meta;
 	}
-	
-	private static ItemStack makeItem(String name, Material type){
+
+	private static ItemStack makeItem(String name, Material type, boolean enchant){
 		ItemStack item = new ItemStack(type);
-		return makeItem(name, item);
+		return makeItem(name, item, enchant);
 	}
 
-	private static ItemStack makeItem(String name, ItemStack item){
+	private static ItemStack makeItem(String name, ItemStack item, boolean enchant){
 		ItemMeta meta = item.getItemMeta();
 		meta.setDisplayName(ChatColor.translateAlternateColorCodes('&', name));
-		item.setItemMeta(setBasicMeta(meta));
+		item.setItemMeta(setBasicMeta(meta, enchant));
 		return item;
 	}
 
